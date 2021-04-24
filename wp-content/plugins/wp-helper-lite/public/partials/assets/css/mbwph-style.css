@@ -1,0 +1,475 @@
+#lostpasswordform div.g-recaptcha,#loginform div.g-recaptcha,#registerform div.g-recaptcha {margin: 12px 0 24px -15px;}
+/**
+* 1. Multi button.
+* 2. Back To Top.
+* 3. CSS For Left - Right Custom.
+* 4. Responesive
+* 5. KeyFrame
+**/
+
+/** 1.Multi button**/
+.mbwph-contact {
+  position: fixed;
+  margin: 0px 25px 15px 0px;
+  z-index: 9999;
+}
+a.mbwph-contact-icon {
+  color: #fff0!important;
+  text-decoration: none;
+  list-style: none;
+  padding: 0px;
+}
+.mbwph-contact-icon {
+  display: block;
+  margin: 10px 0;
+  position: relative;
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.2s;
+  line-height: 1.5;
+  padding: 0px;
+}
+.mbwph-contact-icon:last-child::after {
+  display: none;
+  opacity: 0;
+}
+.mbwph-contact-icon:not(:last-child) {
+  display: none;
+  opacity: 0;
+}
+.mbwph-contact-icon:not(:last-child).is-active {
+  display: block;
+  opacity: 0;
+}
+.mbwph-contact-icon.is-active {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+}
+.mbwph-contact-icon::before {
+  background-size: contain;
+  transition: 0.3s;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:nth-child(8) {
+  animation-name: mbwph-fadeInUp;
+  animation-duration: 200ms;
+  animation-delay: -244ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:nth-child(7) {
+  animation-name: mbwph-fadeInUp;
+  animation-duration: 200ms;
+  animation-delay: -188ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:nth-child(6) {
+  animation-name: mbwph-fadeInUp;
+  animation-duration: 200ms;
+  animation-delay: -132ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:nth-child(5) {
+  animation-name: mbwph-fadeInUp;
+  animation-duration: 200ms;
+  animation-delay: -76ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:nth-child(4) {
+  animation-name: mbwph-fadeInUp;
+  animation-duration: 200ms;
+  animation-delay: -20ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:nth-child(3) {
+  animation-name: mbwph-fadeInUp;
+  animation-duration: 200ms;
+  animation-delay: 36ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:nth-child(2) {
+  animation-name: mbwph-fadeInUp;
+  animation-duration: 200ms;
+  animation-delay: 92ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:nth-child(1) {
+  animation-name: mbwph-fadeInUp;
+  animation-duration: 200ms;
+  animation-delay: 148ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.mbwph-contact > .mbwph-contact-icon.is-active:last-child {
+  animation: none;
+}
+.mbwph-contact-icon::after {
+  content: attr(tooltip);
+  font-family: sans-serif;
+  background: #fff;
+  color: #6b6b6b;
+  border-radius: 15px 0px 15px 0px;
+  padding: 10px;
+  position: absolute;
+  line-height: 1;
+  min-width: 180px;
+  display: inline-block;
+  top: 8px;
+  margin-right: 10px;
+  font-size: 15px;
+  transition: 0.2s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+}
+.mbwph-contact-icon.mbwph-call {
+  background-image: url(../images/phone.svg);
+}
+.mbwph-contact-icon.mbwph-mail {
+  background-image: url(../images/email.svg);
+}
+.mbwph-contact-icon.mbwph-facebook {
+  background-image: url(../images/facebook.svg);
+}
+.mbwph-contact-icon.mbwph-tawkto {
+  background-image: url(../images/chat.svg);
+}
+.mbwph-contact-icon.mbwph-message {
+  background-image: url(../images/messenger.svg);
+}
+.mbwph-contact-icon.mbwph-zalo {
+  background-image: url(../images/zalo.svg);
+}
+.mbwph-contact-icon.is-active:last-child::before {
+  font-family: "dashicons";
+  content: "\f335";
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.7;
+}
+.mbwph-contact-icon:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transition: .4s;
+}
+.mbwph-contact-icon:last-child:hover::after {
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s
+}
+i.fa.fa-phone-square {
+  margin-right: 2px;
+}
+.mbwph-inner-mark {
+  border-radius: 100px;
+  opacity: .2;
+  bottom: 3px;
+  left: -7px;
+  position: absolute;
+  height: 66px;
+  min-width: 66px;
+  visibility: visible;
+  transition: .4s;
+}
+.mbwph-inner-mark.is-close {
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+}
+.mbwph-inner-mark-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+.mbwph-inner-mark-border {
+  -webkit-animation: mbwph-widgetPulse infinite 1.5s;
+  visibility: visible;
+  transition: .4s;
+}
+.mbwph-inner-mark-border.is-close {
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+  display: none;
+}
+.mbwph-inner-text {
+  position: fixed;
+  border-radius: 10px;
+  min-width: 100px;
+  max-width: 200px;
+  height: auto;
+  padding: 18px 25px 18px 18px;
+  background: #fff;
+  color: #6b6b6b;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: sans-serif;
+  box-shadow: 0 8px 26px 0 rgba(0,18,46,0.16);
+  visibility: visible;
+  opacity: 1;
+  transition: .4s;
+}
+.mbwph-inner-text.is-active, .mbwph-inner-text.is-close {
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+}
+span.mbwph-close-inner-text {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background: #eee;
+  background-image: url(../images/close-message.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  cursor: pointer;
+  visibility: visible;
+  transition: .4s;
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  cursor: pointer;
+}
+.mbwph-sm-icon-item img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.mbwph-sm-icon-item {
+  display: none;
+}
+.mbwph-sm-icon-item.mbwph-fade-icon {
+  bottom: 2px;
+  right: 22px;
+  position: absolute;
+  color: #fff;
+  font-size: 26px;
+}
+.mbwph-sm-icon.is-close {
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+}
+.mbwph-fb-chat > #fb-root > .fb_dialog {
+  z-index: 99!important;
+  display: none!important;
+}
+.mbwph-fb-chat > #fb-root > .fb_dialog.fb_dialog_advanced.fb_customer_chat_bubble_animated_no_badge.fb_customer_chat_bubble_pop_in {
+  display: none!important;
+}
+.mbwph-fb-chat > #fb-root > .fb_dialog.fb_dialog_mobile.fb_customer_chat_bubble_animated_no_badge.fb_customer_chat_bubble_pop_in {
+  display: none!important;
+}
+.mbwph-fb-chat > #fb-root > .fb-customerchat > iframe.fb_customer_chat_bounce_in_v2 {
+  bottom: 0px!important;
+}
+.mbwph-fb-chat > #fb-root > .fb-customerchat > span > iframe {
+  z-index: 2147483647!important;
+  bottom: 5px!important;
+}
+.mbwph-fb-chat{
+  display: none;
+}
+.mbwph-fb-chat.is-active{
+  display: block;
+}
+a.mbwph-contact-icon:focus {
+  outline: none;
+}
+/**2. Back To Top **/
+.mbwph-scrollToTop {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  line-height: 35px;
+  text-align: center;
+  color: #777!important;
+  border: 2px solid #777;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+a.mbwph-scrollToTop {
+  outline: none;
+} 
+.mbwph-scrollToTop:hover {
+  background: #446084;
+  color: #fff!important;
+  border: 2px solid #446084;
+  transition: .2s;
+}
+.mbwph-scrollToTop i.dashicons.dashicons-arrow-up-alt2 {
+  line-height: 33px;
+  text-decoration: none;
+  transition: 0s;
+}
+
+/* 3. CSS For Left - Right Custom.*/
+.mbwph-contact-low {
+  bottom: 0;
+}
+.mbwph-contact-hight {
+  bottom: 60px;
+}
+.mbwph-contact-left {
+  left: 0!important;
+  margin-left: 25px!important;
+}
+.mbwph-contact-right {
+  right: 0!important;
+  margin-right: 25px!important;
+}
+.mbwph-fbc-left > #fb-root > .fb-customerchat > span > iframe {
+  left: 0!important;
+  margin-left: 10px!important;
+}
+.mbwph-fbc-right > #fb-root > .fb-customerchat > span > iframe {
+  right: 0px !important;
+  margin-right: 10px!important;
+}
+.mbwph-tooltip-left::after {
+  left: 100%!important;
+  margin-left: 10px!important;
+}
+.mbwph-tooltip-right::after {
+  right: 100%!important;
+  margin-right: 10px!important;
+}
+.mbwph-inner-text-hight {
+  bottom: 160px!important;
+}
+.mbwph-inner-text-low {
+  bottom: 94px!important;
+}
+.mbwph-inner-text-left {
+  left: 20px!important;
+}
+.mbwph-inner-text-right {
+  right: 20px!important;
+}
+.mbwph-stt-low {
+  bottom: 20px;
+}
+.mbwph-stt-hight {
+  bottom: 100px;
+}
+.mbwph-stt-left {
+  left: 34px;
+}
+.mbwph-stt-right {
+  right: 34px;
+}
+/**Clone Action Button/Link**/
+.clone-me.mbwph-clone-action {text-decoration: none;color:#ff3547;}
+span.duplicate a {color:#ff3547;}
+#btn_duplicate_menu .dashicons{vertical-align:middle;}
+#btn_duplicate_menu.button-danger{border: 1px solid #00c851;color:#fff;background:#00c851;}
+/** 4.Responsive **/
+@media only screen and (max-width:1024px){
+  .class, #id, .mbwph-contact a { cursor: default!important }
+  span.mbwph-close-inner-text { cursor: default!important }
+}
+@media and screen (max-width: 768px){
+  .fb-customerchat > span > iframe { height: 100%important; }
+}
+@media only screen and (max-width:768px ){
+  .mbwph-sm-icon-item.mbwph-fade-icon { bottom: 2px }
+  .mbwph-contact { margin: 20px 25px 20px 0; }
+  .mbwph-inner-text-right { right: 22px; }
+  .mbwph-inner-text-left { left: 22px; }
+  .class, #id, .mbwph-contact a { cursor: default!important }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/** 5.KeyFrame **/
+@keyframes shadow {
+  from {
+    text-shadow: 0 3px 10px rgba(255, 255, 255, .3);
+  }
+  to {
+    text-shadow: 0 3px 13px rgba(255, 255, 255, .9);
+  }
+}
+@-webkit-keyframes mbwph-widgetPulse {
+  50% {
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    opacity: 1
+  }
+  100% {
+    -webkit-transform: scale(2,2);
+    transform: scale(2,2);
+    opacity: 0
+  }
+}
+
+@keyframes mbwph-widgetPulse {
+  50% {
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    opacity: 1
+  }
+  100% {
+    -webkit-transform: scale(2,2);
+    transform: scale(1.5,1.5);
+    opacity: 0
+  }
+}
+@-webkit-keyframes mbwph-fade-icon {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes mbwph-fade-icon {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes mbwph-fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes mbwph-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
